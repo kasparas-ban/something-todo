@@ -23,7 +23,7 @@ export default function RootLayout() {
               {`${item.icon} ${item.label}`}
               {item === selectedTab ? (
                 <motion.div
-                  className="absolute bottom-px left-0 right-0 h-px bg-accent"
+                  className="absolute bottom-0 left-0 right-0 z-10 h-px bg-accent"
                   layoutId="underline"
                 />
               ) : null}
