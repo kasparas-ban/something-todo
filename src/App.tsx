@@ -1,5 +1,4 @@
 import './App.css'
-import Check from './Check/Check'
 import RootLayout from './RootLayout/RootLayout'
 
 function App() {
