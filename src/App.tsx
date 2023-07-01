@@ -1,4 +1,5 @@
 import { Routes, Route, useLocation } from 'react-router-dom'
+import ReloadPrompt from './ReloadPrompt/ReloadPrompt'
 import RootLayout from './RootLayout/RootLayout'
 import { tabs } from './RootLayout/tabs'
 import './App.css'
@@ -8,6 +9,7 @@ function App() {
 
   return (
     <RootLayout>
+      <ReloadPrompt />
       {/* <AnimatePresence mode="popLayout">
         <motion.div
           key={location.pathname}
