@@ -11,6 +11,7 @@ function ReloadPrompt() {
     onRegistered(r) {
       // eslint-disable-next-line prefer-template
       console.log('SW Registered: ' + r)
+      setOfflineReady(true)
     },
     onRegisterError(error) {
       console.log('SW registration error', error)
@@ -21,6 +22,8 @@ function ReloadPrompt() {
     setOfflineReady(false)
     setNeedRefresh(false)
   }
+
+  console.log('PROMPT', offlineReady, needRefresh)
 
   return (
     <div className="ReloadPrompt-container">
