@@ -1,24 +1,53 @@
 import { useRegisterSW } from 'virtual:pwa-register/react'
 
 function ReloadPrompt() {
+  const online = true // TODO: change this to hook useOnline
+
   const {
     offlineReady: [offlineReady, setOfflineReady],
     needRefresh: [needRefresh, setNeedRefresh],
     updateServiceWorker,
   } = useRegisterSW({
+    // immediate: true,
     onRegistered(r) {
       console.log('SW Registered: ' + r)
       setOfflineReady(true)
+
       r &&
-        setInterval(() => {
-          console.log('Updating SW', offlineReady, needRefresh)
-          // r.update()
-        }, 20 * 1000)
+        r.addEventListener('updatefound', () => {
+          console.log('Service Worker update found!')
+          r.update()
+        })
+
+      // r &&
+      //   setInterval(() => {
+      //     console.log('Updating SW', offlineReady, needRefresh)
+      //     r.update()
+      //   }, 20 * 1000)
     },
     onRegisterError(error) {
       console.log('SW registration error', error)
     },
   })
+
+  // const registerPeriodicSync = (
+  //   swUrl: string,
+  //   r: ServiceWorkerRegistration
+  // ) => {
+  //   setInterval(async () => {
+  //     if (!online) return
+
+  //     const resp = await fetch(swUrl, {
+  //       cache: 'no-store',
+  //       headers: {
+  //         cache: 'no-store',
+  //         'cache-control': 'no-cache',
+  //       },
+  //     })
+
+  //     if (resp?.status === 200) await r.update()
+  //   }, 60 * 60 * 1000 /* 1 hour */)
+  // }
 
   const close = () => {
     setOfflineReady(false)
