@@ -9,6 +9,11 @@ function ReloadPrompt() {
     onRegistered(r) {
       console.log('SW Registered: ' + r)
       setOfflineReady(true)
+      r &&
+        setInterval((r: ServiceWorkerRegistration) => {
+          console.log('Updating SW')
+          r.update()
+        }, 20 * 1000)
     },
     onRegisterError(error) {
       console.log('SW registration error', error)
