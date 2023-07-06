@@ -28,8 +28,7 @@ function ReloadPrompt() {
         <div className="text-center">
           {needRefresh ? (
             <span>
-              Ready to work offline!New content available, click on reload
-              button to update.
+              New content available, click on reload button to update.
             </span>
           ) : (
             <span>Ready to work offline!</span>
