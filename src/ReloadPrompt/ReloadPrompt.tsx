@@ -1,5 +1,3 @@
-import './ReloadPrompt.css'
-
 import { useRegisterSW } from 'virtual:pwa-register/react'
 
 function ReloadPrompt() {
@@ -9,7 +7,6 @@ function ReloadPrompt() {
     updateServiceWorker,
   } = useRegisterSW({
     onRegistered(r) {
-      // eslint-disable-next-line prefer-template
       console.log('SW Registered: ' + r)
       setOfflineReady(true)
     },
@@ -26,32 +23,35 @@ function ReloadPrompt() {
   console.log('PROMPT', offlineReady, needRefresh)
 
   return (
-    <div className="ReloadPrompt-container">
-      {(offlineReady || needRefresh) && (
-        <div className="ReloadPrompt-toast">
-          <div className="ReloadPrompt-message">
-            {offlineReady ? (
-              <span>App ready to work offline</span>
-            ) : (
-              <span>
-                New content available, click on reload button to update.
-              </span>
-            )}
-          </div>
+    (offlineReady || needRefresh) && (
+      <div className="absolute bottom-16 flex flex-col gap-2 rounded-xl bg-gray-50 px-5 py-2 drop-shadow-md md:bottom-auto md:top-16">
+        <div className="text-center">
+          {offlineReady ? (
+            <span>Ready to work offline!</span>
+          ) : (
+            <span>
+              New content available, click on reload button to update.
+            </span>
+          )}
+        </div>
+        <div className="mx-auto flex gap-2">
           {needRefresh && (
             <button
-              className="ReloadPrompt-toast-button"
+              className="w-fit rounded-md bg-blue-300 px-3 py-1 font-medium hover:bg-accent"
               onClick={() => updateServiceWorker(true)}
             >
               Reload
             </button>
           )}
-          <button className="ReloadPrompt-toast-button" onClick={() => close()}>
+          <button
+            className="w-fit rounded-md bg-gray-200 px-3 py-1 font-medium hover:bg-gray-300"
+            onClick={() => close()}
+          >
             Close
           </button>
         </div>
-      )}
-    </div>
+      </div>
+    )
   )
 }
 

@@ -16,7 +16,7 @@ export default defineConfig({
         name: 'Something Todo',
         short_name: 'SomethingTodo',
         description: 'Track your work progress',
-        theme_color: '#ffffff',
+        theme_color: '#00a6ed',
         icons: [
           {
             src: 'pwa-192x192.png',

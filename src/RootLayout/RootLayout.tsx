@@ -33,7 +33,7 @@ export default function RootLayout({
                 {`${tab.icon} ${tab.label}`}
                 {isSelected(tab.path) ? (
                   <motion.div
-                    className="absolute bottom-0 left-0 right-0 z-10 h-[1.5px] bg-accent"
+                    className="absolute bottom-0 left-0 right-0 z-10 h-[3px] bg-accent"
                     layoutId="underline"
                   />
                 ) : null}
