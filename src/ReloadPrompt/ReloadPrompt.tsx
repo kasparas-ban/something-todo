@@ -14,16 +14,10 @@ function ReloadPrompt() {
       setOfflineReady(true)
 
       r &&
-        r.addEventListener('updatefound', () => {
-          console.log('Service Worker update found!')
+        setInterval(() => {
+          console.log('Updating SW', offlineReady, needRefresh)
           r.update()
-        })
-
-      // r &&
-      //   setInterval(() => {
-      //     console.log('Updating SW', offlineReady, needRefresh)
-      //     r.update()
-      //   }, 20 * 1000)
+        }, 20 * 1000)
     },
     onRegisterError(error) {
       console.log('SW registration error', error)
