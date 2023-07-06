@@ -10,7 +10,7 @@ function ReloadPrompt() {
       console.log('SW Registered: ' + r)
       setOfflineReady(true)
       r &&
-        setInterval((r: ServiceWorkerRegistration) => {
+        setInterval(() => {
           console.log('Updating SW')
           r.update()
         }, 20 * 1000)
