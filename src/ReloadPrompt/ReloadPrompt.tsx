@@ -1,7 +1,7 @@
 import { useRegisterSW } from 'virtual:pwa-register/react'
 
 function ReloadPrompt() {
-  const online = true // TODO: change this to hook useOnline
+  // const online = true // TODO: change this to hook useOnline
 
   const {
     offlineReady: [offlineReady, setOfflineReady],
