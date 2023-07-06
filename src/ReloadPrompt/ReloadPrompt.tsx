@@ -1,5 +1,7 @@
 import { useRegisterSW } from 'virtual:pwa-register/react'
 
+const UPDATE_INTERVAL = 20 * 1000
+
 function ReloadPrompt() {
   const {
     offlineReady: [offlineReady, setOfflineReady],
@@ -7,13 +9,8 @@ function ReloadPrompt() {
     updateServiceWorker,
   } = useRegisterSW({
     onRegistered(r) {
-      console.log('SW Registered: ' + r)
       setOfflineReady(true)
-      // r &&
-      //   setInterval(() => {
-      //     console.log('Updating SW', offlineReady, needRefresh)
-      //     r.update()
-      //   }, 20 * 1000)
+      r && setInterval(() => r.update(), UPDATE_INTERVAL)
     },
     onRegisterError(error) {
       console.log('SW registration error', error)
@@ -29,12 +26,13 @@ function ReloadPrompt() {
     (offlineReady || needRefresh) && (
       <div className="absolute bottom-16 flex flex-col gap-2 rounded-xl bg-gray-50 px-5 py-2 drop-shadow-md md:bottom-auto md:top-16">
         <div className="text-center">
-          {offlineReady ? (
-            <span>Ready to work offline!</span>
-          ) : (
+          {needRefresh ? (
             <span>
-              New content available, click on reload button to update.
+              Ready to work offline!New content available, click on reload
+              button to update.
             </span>
+          ) : (
+            <span>Ready to work offline!</span>
           )}
         </div>
         <div className="mx-auto flex gap-2">
