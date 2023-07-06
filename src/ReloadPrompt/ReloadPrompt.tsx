@@ -11,8 +11,8 @@ function ReloadPrompt() {
       setOfflineReady(true)
       r &&
         setInterval(() => {
-          console.log('Updating SW')
-          r.update()
+          console.log('Updating SW', offlineReady, needRefresh)
+          // r.update()
         }, 20 * 1000)
     },
     onRegisterError(error) {
