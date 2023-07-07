@@ -1,0 +1,42 @@
+{
+  "packageId": "app.vercel.something_todo_nu.twa",
+  "host": "something-todo-nu.vercel.app",
+  "name": "Something Todo",
+  "launcherName": "Smth Todo",
+  "display": "standalone",
+  "themeColor": "#00A6ED",
+  "navigationColor": "#000000",
+  "navigationColorDark": "#000000",
+  "navigationDividerColor": "#000000",
+  "navigationDividerColorDark": "#000000",
+  "backgroundColor": "#00A6ED",
+  "enableNotifications": true,
+  "startUrl": "/",
+  "iconUrl": "https://something-todo-nu.vercel.app/pwa-512x512.png",
+  "maskableIconUrl": "https://something-todo-nu.vercel.app/mask-icon.png",
+  "splashScreenFadeOutDuration": 300,
+  "signingKey": {
+    "path": "/home/kaspis/something-todo/android.keystore",
+    "alias": "android"
+  },
+  "appVersionName": "1",
+  "appVersionCode": 1,
+  "shortcuts": [],
+  "generatorApp": "bubblewrap-cli",
+  "webManifestUrl": "https://something-todo-nu.vercel.app/manifest.webmanifest",
+  "fallbackType": "customtabs",
+  "features": {},
+  "alphaDependencies": {
+    "enabled": false
+  },
+  "enableSiteSettingsShortcut": true,
+  "isChromeOSOnly": false,
+  "isMetaQuest": false,
+  "fullScopeUrl": "https://something-todo-nu.vercel.app/",
+  "minSdkVersion": 19,
+  "orientation": "default",
+  "fingerprints": [],
+  "additionalTrustedOrigins": [],
+  "retainedBundles": [],
+  "appVersion": "1"
+}

@@ -1,0 +1,8 @@
+app/vercel/something_todo_nu/twa/Application.java
+ app.vercel.something_todo_nu.twa.Application
+app/vercel/something_todo_nu/twa/DelegationService.java
+ app.vercel.something_todo_nu.twa.DelegationService
+app/vercel/something_todo_nu/twa/LauncherActivity.java
+ app.vercel.something_todo_nu.twa.LauncherActivity
+app/vercel/something_todo_nu/twa/BuildConfig.java
+ app.vercel.something_todo_nu.twa.BuildConfig
