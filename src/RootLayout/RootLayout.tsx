@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import clsx from 'clsx'
+import StatusBadge from '../StatusBadge'
 import { tabs } from './tabs'
 import './styles.css'
 
@@ -15,6 +16,7 @@ export default function RootLayout({
 
   return (
     <div className="relative mx-auto h-screen max-w-lg">
+      <StatusBadge />
       <nav className="absolute bottom-0 left-0 right-0 h-12 w-[inherit] max-w-lg overflow-hidden rounded-xl rounded-b-none max-[512px]:rounded-none md:relative md:h-10 md:rounded-b-lg md:rounded-t-none md:border-b-gray-200">
         <ul className="flex h-full max-w-lg bg-gray-100">
           {tabs.map(tab => (

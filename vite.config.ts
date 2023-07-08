@@ -7,9 +7,14 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({
+      // strategies: 'injectManifest',
+      // srcDir: 'src',
+      // filename: 'custom-sw.ts',
       registerType: 'prompt',
       devOptions: {
         enabled: true,
+        // type: 'module',
+        // navigateFallback: 'index.html',
       },
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
       manifest: {
