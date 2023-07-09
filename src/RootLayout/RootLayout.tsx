@@ -15,7 +15,7 @@ export default function RootLayout({
   const isSelected = (path: string) => path === location.pathname
 
   return (
-    <div className="relative mx-auto h-screen max-w-lg">
+    <div className="relative mx-auto h-[100dvh] max-w-lg">
       <StatusBadge />
       <nav className="absolute bottom-0 left-0 right-0 h-12 w-[inherit] max-w-lg overflow-hidden rounded-xl rounded-b-none max-[512px]:rounded-none md:relative md:h-10 md:rounded-b-lg md:rounded-t-none md:border-b-gray-200">
         <ul className="flex h-full max-w-lg bg-gray-100">
