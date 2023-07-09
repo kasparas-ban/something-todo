@@ -24,7 +24,7 @@ function ReloadPrompt() {
 
   return (
     (offlineReady || needRefresh) && (
-      <div className="absolute bottom-16 flex flex-col gap-2 rounded-xl bg-gray-50 px-5 py-2 drop-shadow-md md:bottom-auto md:top-16">
+      <div className="absolute bottom-16 z-10 flex flex-col gap-2 rounded-xl bg-gray-50 px-5 py-2 drop-shadow-md md:bottom-auto md:top-16">
         <div className="text-center">
           {needRefresh ? (
             <span>

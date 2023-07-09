@@ -7,19 +7,19 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({
-      // strategies: 'injectManifest',
-      // srcDir: 'src',
-      // filename: 'custom-sw.ts',
+      strategies: 'injectManifest',
+      srcDir: 'src',
+      filename: 'custom-sw.ts',
       registerType: 'prompt',
       devOptions: {
         enabled: true,
-        // type: 'module',
-        // navigateFallback: 'index.html',
+        type: 'module',
+        navigateFallback: 'index.html',
       },
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
       manifest: {
         name: 'Something Todo',
-        short_name: 'SomethingTodo',
+        short_name: 'SmthTodo',
         description: 'Track your work progress',
         theme_color: '#00a6ed',
         icons: [

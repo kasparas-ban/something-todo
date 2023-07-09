@@ -1,7 +1,7 @@
 import { ReactElement } from 'react'
 import HomeTab from '../Tabs/HomeTab'
-import BooksTab from '../Tabs/BooksTab'
-import InfoTab from '../Tabs/InfoTab'
+import TodoTab from '../Tabs/TodoTab'
+import CacheTab from '../Tabs/CacheTab'
 
 export interface Tab {
   icon: string
@@ -12,6 +12,6 @@ export interface Tab {
 
 export const tabs: Tab[] = [
   { icon: '🏠', label: 'Home', path: '/', Element: <HomeTab /> },
-  { icon: '📖', label: 'Books', path: '/books', Element: <BooksTab /> },
-  { icon: 'ℹ️', label: 'Info', path: '/info', Element: <InfoTab /> },
+  { icon: '📃', label: 'Todos', path: '/todos', Element: <TodoTab /> },
+  { icon: '📒', label: 'Cache', path: '/cache', Element: <CacheTab /> },
 ]

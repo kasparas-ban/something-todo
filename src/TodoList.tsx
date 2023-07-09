@@ -10,7 +10,7 @@ export default function TodoList() {
   }
 
   return (
-    <div>
+    <div className="absolute top-20">
       <div>
         <motion.button
           whileTap={{ scale: 0.95 }}
@@ -29,7 +29,7 @@ export default function TodoList() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
               transition={{ type: 'spring' }}
-              key={item.toString()}
+              key={formatDate(item)}
               onClick={() => {
                 const newItems = [...items]
                 removeItem(newItems, item)
