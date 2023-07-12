@@ -5,10 +5,7 @@
       "namespace": "android_app",
       "package_name": "app.vercel.something_todo_nu.twa",
       "sha256_cert_fingerprints": [
-        "AE:51:D4:FC:2F:F8:84:51:48:0F:AF:BC:08:58:D9:61:FF:0B:2D:89:08:0B:66:C9:AC:59:F2:34:69:A1:BB:7F",
-        "FA:A9:50:9A:68:77:F8:A9:E8:F4:E2:7F:04:23:C7:91:82:3D:60:F2:FD:5B:C6:1E:85:70:1A:95:04:10:3A:EA",
-        "95:E4:38:89:2F:EC:F6:5A:CE:C1:51:C0:64:C0:5F:50:72:F7:50:1E:89:54:25:56:FB:E8:C0:B3:2F:4C:2D:A4",
-        "47:51:8B:F9:E7:8C:7F:EB:4F:B5:DD:87:3B:2F:18:AD:3B:A8:8F:32"
+        "95:E4:38:89:2F:EC:F6:5A:CE:C1:51:C0:64:C0:5F:50:72:F7:50:1E:89:54:25:56:FB:E8:C0:B3:2F:4C:2D:A4"
       ]
     }
   }
